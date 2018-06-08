@@ -8,7 +8,7 @@ import (
 func main()  {
 
 	for i:=0;i<10;i++ {
-		fmt.print(rand.Intn(100))
+		fmt.Printf(rand.Int(100))
 	}
 
 }
