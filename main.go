@@ -1,4 +1,4 @@
-package go_test
+package main
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ func main()  {
 	for i:=0;i<10;i++ {
 		fmt.println(rand.Intn(100))
 	}
-	
+
 }
 
 
