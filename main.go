@@ -2,6 +2,8 @@ package main
 
 import (
 	"database/sql"
+	//go mysql驱动需要下载【下载：go get github.com/Go-SQL-Driver/MySQL 安装：go install github.com/Go-SQL-Driver/MySQL】
+	//github.com会安装在$GOPATH的src目录下
 	_ "github.com/go-sql-driver/mysql"
 	"fmt"
 )
