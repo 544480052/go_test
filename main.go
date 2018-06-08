@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	_ "github.com/go-sql-driver/mysql"
 	"fmt"
 )
 
@@ -38,5 +39,5 @@ func main() {
 		fmt.Println(err)
 	}
 
-	
+
 }
