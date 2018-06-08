@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 func main()  {
@@ -13,18 +13,30 @@ func main()  {
 	//	fmt.Println(rand.Intn(100))
 	//}
 
-	//初始化随机数种子
+	//初始时间化随机数种子
 	//rand.Seed(time.Now().UnixNano())
 	//for i:=0;i<10;i++  {
 	//	fmt.Println(rand.Intn(100))
 	//}
 
-	//初始化随机数种子
+	//初始时间化随机数种子
+	//r:=	rand.New(rand.NewSource(time.Now().UnixNano()))
+	//for i:=0;i<10;i++  {
+	//	fmt.Println(r.Intn(100))
+	//}
+
+
+	for i:=0;i<10;i++  {
+		fmt.Println(rand.Int63())
+	}
+	//初始化时间随机数种子
 	r:=	rand.New(rand.NewSource(time.Now().UnixNano()))
 	for i:=0;i<10;i++  {
-		fmt.Println(r.Intn(100))
+		fmt.Println(r.Int63())
 	}
-	
+
+
+
 
 
 }
