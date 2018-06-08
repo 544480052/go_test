@@ -10,7 +10,7 @@ import (
 
 func main() {
 	//链接数据库【驱动，数据库信息（用户名:密码@tcp(IP:端口)/数据库名?charset=utf8）】
-	db, error := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/dev_im?charset=utf8")
+	db, error := sql.Open("mysql", "root:''@tcp(127.0.0.1:3306)/dev_im?charset=utf8")
 	if error != nil {
 		fmt.Println(error)
 	}
