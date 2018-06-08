@@ -7,7 +7,7 @@ import (
 
 func main()  {
 
-	fmt.Print(time.Now())
+	fmt.Print(time.Now().UnixNano())
 
 }
 
