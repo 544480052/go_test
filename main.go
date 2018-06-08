@@ -13,12 +13,19 @@ func main()  {
 	//	fmt.Println(rand.Intn(100))
 	//}
 
-	//r:=	rand.New(rand.NewSource(time.Now().UnixNano()))
 	//初始化随机数种子
-	rand.Seed(time.Now().UnixNano())
+	//rand.Seed(time.Now().UnixNano())
+	//for i:=0;i<10;i++  {
+	//	fmt.Println(rand.Intn(100))
+	//}
+
+	//初始化随机数种子
+	r:=	rand.New(rand.NewSource(time.Now().UnixNano()))
 	for i:=0;i<10;i++  {
-		fmt.Println(rand.Intn(100))
+		fmt.Println(r.Intn(100))
 	}
+	
+
 
 }
 
