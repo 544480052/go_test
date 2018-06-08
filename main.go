@@ -21,7 +21,7 @@ func main() {
 	}
 
 	//执行sql
-	rows,error:= db.Query("select * from user")
+	rows,error:= db.Query("select staff_name from user")
 	defer rows.Close()//方法执行结束之前关闭链接
 	if error!=nil {
 		fmt.Println(error)
