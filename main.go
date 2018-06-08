@@ -17,7 +17,7 @@ func main()  {
 	//初始化随机数种子
 	rand.Seed(time.Now().UnixNano())
 	for i:=0;i<10;i++  {
-		fmt.Print(rand.Intn(100))
+		fmt.Println(rand.Intn(100))
 	}
 
 }
