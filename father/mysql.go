@@ -23,7 +23,6 @@ type Orm struct {
 	c	[]*myStruct		c是指向一个结构体类型变量的指针数组
 	 */
 
-
 	db         *sql.DB
 	dbSlave    []*sql.DB
 	dbSlaveLen int
@@ -69,6 +68,17 @@ func init() {
 }
 
 //  实例化一个 ORM
+/**
+func function_name( [parameter list] ) [return_types] {
+   函数体
+}
+func：Go的函数声明关键字，声明一个函数。
+function_name：函数名称，函数名和参数列表一起构成了函数签名。
+parameter list：参数列表，指定的是参数类型、顺序、及参数个数。参数是可选的，即函数可以不包含参数。
+				参数就像一个占位符，这是参数被称为形参，当函数被调用时，将具体的值传递给参数，这个值被称为实际参数。
+return_types：	返回类型，函数返回一列值。return_types 是该列值的数据类型。这里需要注意的是Go函数支持多返回值。
+				有些功能不需要返回值，这种情况下 return_types 不是必须的。
+ */
 func Open(dataSource string) (*Orm, error) {
 	db, err := sql.Open(DRIVE_NAME, dataSource)
 	if err != nil {

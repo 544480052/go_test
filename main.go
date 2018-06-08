@@ -1,25 +1,42 @@
 package main
 
 import (
+	"database/sql"
 	"fmt"
-	"time"
 )
 
 func main() {
+	//链接数据库【驱动，数据库信息（用户名:密码@tcp(IP:端口)/数据库名?charset=utf8）】
+	db, error := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/dev_im?charset=utf8")
+	if error != nil {
+		fmt.Println(error)
+	}
+	//Open 可能只是验证其参数而不创建与数据库的连接。要验证数据源名称是否有效，请调用 Ping
+	error = db.Ping()
+	if error != nil {
+		fmt.Println(error)
+	}
 
-	//毫秒级时间戳
-	fmt.Println(time.Now().UnixNano())
+	//执行sql
+	rows,error:= db.Query("select * from users")
+	defer rows.Close()//方法执行结束之前关闭链接
+	if error!=nil {
+		fmt.Println(error)
+	}
 
-	//秒级时间戳
-	timestamp := time.Now().Unix()
-	fmt.Println(timestamp)
+	for rows.Next(){
+		var staff_name string
+		err:= rows.Scan(&staff_name)
+		if err!=nil {
+			fmt.Println(err)
+		}
+		fmt.Println(staff_name)
+	}
 
-	//yyyy-mm-dd时间格式化成时间戳
-	tm1, _ := time.Parse("2006-01-02 03:04:05", "2018-01-01 01:01:01")
-	fmt.Println(tm1.Unix())
+	err := rows.Err()
+	if err!=nil {
+		fmt.Println(err)
+	}
 
-	//时间戳格式化成yyyy-mm-d
-	tm2 := time.Unix(timestamp, 0)
-	fmt.Println(tm2.Format("2006-01-02 03:04:05"))
-
+	
 }
