@@ -27,7 +27,7 @@ func main() {
 		fmt.Println(error)
 	}
 
-	var name = []string{}
+	var name []string
 	for rows.Next() {
 		var staff_name string
 		err := rows.Scan(&staff_name)
