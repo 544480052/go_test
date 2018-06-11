@@ -27,7 +27,8 @@ func main() {
 		fmt.Println(error)
 	}
 
-	name :=[...]string{}
+	var name  [...]string
+	//name :=[...]string{}
 	index :=0
 	for rows.Next() {
 		var staff_name string
