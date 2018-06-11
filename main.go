@@ -27,7 +27,7 @@ func main() {
 		fmt.Println(error)
 	}
 
-	var name  [...]string
+	var name []string
 	//name :=[...]string{}
 	index :=0
 	for rows.Next() {
@@ -36,7 +36,7 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		name[index] = staff_name
+		name = append(name,staff_name)
 		index++
 	}
 	fmt.Println(name)
