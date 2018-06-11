@@ -21,7 +21,7 @@ func main() {
 	}
 
 	//执行sql
-	rows, error := db.Query("select id,staff_name from user")
+	rows, error := db.Query("select staff_name from user")
 	defer rows.Close() //方法执行结束之前关闭链接
 	if error != nil {
 		fmt.Println(error)
@@ -29,13 +29,12 @@ func main() {
 
 	var name = []string{}
 	for rows.Next() {
-		var id int
 		var staff_name string
-		err := rows.Scan(&id,&staff_name)
+		err := rows.Scan(&staff_name)
 		if err != nil {
 			fmt.Println(err)
 		}
-		name[id] = staff_name
+		name = append(name,staff_name)
 	}
 	fmt.Println(name)
 
