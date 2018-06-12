@@ -20,7 +20,7 @@ type Orm struct {
 	/**
 	a 	myStruct    	a是结构体类型变量
 	b 	*myStruct		b是指向一个结构体类型变量的指针
-	c	[]*myStruct		c是指向一个结构体类型变量的指针数组
+	c	[]*myStruct		c是指向一个结构体类型变量的指针切片
 	 */
 
 	db         *sql.DB
