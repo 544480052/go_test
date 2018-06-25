@@ -58,7 +58,7 @@ func main() {
 	me.name = "cx";
 	me.age = 18;
 	println("I am ")
-	println(*me)
+	fmt.Println(*me)
 
 
 }
