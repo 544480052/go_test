@@ -20,7 +20,7 @@ type Person struct {
 func (person Person) close()  {
 	fmt.Println("I am close")
 }
-func (person *Person) myAge() int {
+func (person Person) myAge() int {
 	return person.age;
 }
 
@@ -58,7 +58,7 @@ func main() {
 	me.name = "cx"
 	me.age = 18
 	me.like = []string{"cccc","dddd"}
-	fmt.Println("I am ",*me)
 	println("I like ",me.like)
+	fmt.Println("I am ",*me)
 
 }
