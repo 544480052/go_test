@@ -20,7 +20,7 @@ type Person struct {
 func (person Person) close()  {
 	fmt.Println("I am close")
 }
-func (person Person) myAge() int {
+func (person *Person) myAge() int {
 	return person.age;
 }
 
