@@ -54,11 +54,10 @@ func main() {
 	//println("my age is ",age);
 
 	//结构体继承
-	var me = new(Me);
-	me.name = "cx";
-	me.age = 18;
-	println("I am ")
-	fmt.Println(*me)
-
-
+	var me = new(Me)
+	me.name = "cx"
+	me.age = 18
+	me.like = []string{"cccc","dddd"}
+	fmt.Println("I am ",*me)
+	
 }
