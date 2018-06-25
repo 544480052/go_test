@@ -24,6 +24,12 @@ func (person Person) myAge() int {
 	return person.age;
 }
 
+type Me struct {
+	Person
+	sex string
+}
+
+
 
 
 
@@ -41,10 +47,17 @@ func main() {
 	//调用结构体函数
 	//var person  = new(Person)
 	//person.close()
-	
-	var person = new(Person);
-	person.age = 12;
-	var age = person.myAge();
-	println("my age is ",age);
+
+	//var person = new(Person);
+	//person.age = 12;
+	//var age = person.myAge();
+	//println("my age is ",age);
+
+	//结构体继承
+	var me = new(Me);
+	me.name = "cx";
+	me.age = 18;
+	println("I am ",me)
+
 
 }
