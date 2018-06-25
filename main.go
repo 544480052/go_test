@@ -59,6 +59,7 @@ func main() {
 	me.age = 18
 	me.like = []string{"cccc","dddd"}
 	println("I like ",me.like)
+	println("I age is ",me.age)
 	fmt.Println("I am ",*me)
 
 }
