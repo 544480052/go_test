@@ -57,7 +57,8 @@ func main() {
 	var me = new(Me);
 	me.name = "cx";
 	me.age = 18;
-	println("I am ",*me)
+	println("I am ")
+	println(*me)
 
 
 }
