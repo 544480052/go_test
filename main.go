@@ -51,7 +51,7 @@ func main() {
 	//var person = new(Person);
 	//person.age = 12;
 	//var age = person.myAge();
-	//println("my age is ",age);
+	//println("my age is ",age);//只能打印字符串和数字类型
 
 	//结构体继承
 	var me = new(Me)
@@ -59,5 +59,6 @@ func main() {
 	me.age = 18
 	me.like = []string{"cccc","dddd"}
 	fmt.Println("I am ",*me)
-	
+	println("I like ",me.like)
+
 }
