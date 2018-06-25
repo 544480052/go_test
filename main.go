@@ -8,26 +8,29 @@ import "fmt"
 	*&可以抵消掉，但&*是不可以抵消
  */
 
-type person struct {
+type Person struct {
 	name string
 	age int
 	like []string
 }
 
-func close()  {
-	
+func (person Person) close()  {
+	fmt.Println("I am close")
 }
 
 
 
 func main() {
 
-	p:=person{
-		"张三",
-		12,
-		[]string{"aaa","bbb"},
-	}
-		
-	fmt.Println(p)
+	//p:=Person{
+	//	"张三",
+	//	12,
+	//	[]string{"aaa","bbb"},
+	//}
+	//
+	//fmt.Println(p)
+
+	var person  = new(Person)
+	person.close()
 
 }
