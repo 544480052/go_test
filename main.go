@@ -14,14 +14,22 @@ type Person struct {
 	like []string
 }
 
+/**
+申明函数 【函数所属结构体】 函数名 【返回值类型】
+ */
 func (person Person) close()  {
 	fmt.Println("I am close")
 }
+func (person Person) myAge() int {
+	return person.age;
+}
+
 
 
 
 func main() {
 
+	//给结构体复制
 	//p:=Person{
 	//	"张三",
 	//	12,
@@ -30,7 +38,13 @@ func main() {
 	//
 	//fmt.Println(p)
 
-	var person  = new(Person)
-	person.close()
+	//调用结构体函数
+	//var person  = new(Person)
+	//person.close()
+	
+	var person = new(Person);
+	person.age = 12;
+	var age = person.myAge();
+	println("my age is ",age);
 
 }
